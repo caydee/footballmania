@@ -26,20 +26,24 @@
                 <?php endif; ?>
             </div>
 
-            <hr>
-            <div class="col-md-12 bg-dark">
+
+        </div>
+        <hr>
+        <div class="bg-dark">
+            <div class="container">
                 <nav class="nav my-4">
-              <span class="navbar-text">
-                  © 2021 Football Mania
-                </span>
+                    <span class="navbar-text">
+                        © 2021 Football Mania
+                    </span>
                     <a class="nav-link text-muted" href="<?=site_url('page/terms-of-service'); ?>">Terms &amp;
-                        Conditions</a>
+                        Conditions
+                    </a>
                     <a class="nav-link text-muted" href="<?=site_url('page/privacy-policy'); ?>">Privacy</a>
                     <a class="nav-link text-muted" href="<?=site_url('page/contact-us'); ?>">Contact Us</a>
                 </nav>
             </div>
-        </div>
 
+        </div>
     </div>
 
 </footer>
