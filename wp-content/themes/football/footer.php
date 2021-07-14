@@ -27,7 +27,7 @@
             </div>
 
             <hr>
-            <div class="col-md-12">
+            <div class="col-md-12 bg-dark">
                 <nav class="nav my-4">
               <span class="navbar-text">
                   © 2021 Football Mania
