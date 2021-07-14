@@ -52,14 +52,14 @@ get_header();
             </div>
             <div class="card-deck">
                 <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_andy_murray_loses_br5a9d3f13d8c62.jpg" alt="Card image cap">
+                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/irene_ndunda_of_kdf_60ebf09d4bc62.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h6 class="card-title">Lionel Messi’s brother arrested in gun-drama</h6>
                         <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
                     </div>
                 </div>
                 <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_ronaldo_and_ramos_ho5a9ce367881ab.jpg" alt="Card image cap">
+                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/irene_ndunda_of_kdf_60ebf09d4bc62.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h6 class="card-title">Players attacked by fans after Dutch league match</h6>
                         <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
