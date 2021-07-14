@@ -10,8 +10,8 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md sticky-top  navbar-dark py-0" style="background: #000000;">
-    <a class="navbar-brand  px-2" href="#">
-        <img src="img/logo.png"  alt="game-yetu-logo" class="logo">
+    <a class="navbar-brand  px-2" href="<?= get_home_url(); ?>">
+        <img src="<?=get_template_directory_uri(); ?>/assets/img/logo.png"  alt="Football Mania">
     </a>
     <button class="navbar-toggler  ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="<?= get_home_url(); ?>">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Football</a>

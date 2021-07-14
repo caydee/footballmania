@@ -1,7 +1,7 @@
 <?php
 
 /*
- *  Template Name: Index
+ *  Template Name: Contact Us
  *
  *  @Package Football Mania
  *

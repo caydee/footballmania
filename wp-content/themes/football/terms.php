@@ -1,7 +1,7 @@
 <?php
 
 /*
- *  Template Name: Index
+ *  Template Name: Terms of service
  *
  *  @Package Football Mania
  *
