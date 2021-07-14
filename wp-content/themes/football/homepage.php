@@ -15,7 +15,7 @@ get_header();
             </div>
             <div class="card flex-xl-row mb-3 box-shadow">
                 <a href="" class="">
-                    <img class="card-img-left" alt="Thumbnail [200x250]" src="https://cdn.standardmedia.co.ke/images/monday/thumb_lionel_messis_bro5a9d11c0d7d48.jpg">
+                    <img class="card-img-left" alt="Thumbnail [200x250]" src="https://cdn.standardmedia.co.ke/images/monday/irene_ndunda_of_kdf_60ebf09d4bc62.jpg">
                 </a>
 
                 <div class="card-body">
@@ -36,14 +36,14 @@ get_header();
                     </div>
                 </div>
                 <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_manchester_united_sq5a9cdb4360671.jpg" alt="Card image cap">
+                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/wednesday/bolt_tells_richardso60ee8ebe9a8db.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h6 class="card-title">KPL preview: Ssimbwa, Pamzo meet for the first time since Narok bust up as Gor host Bandari</h6>
                         <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
                     </div>
                 </div>
                 <div class="card mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_im_a_warrior5a9cfa70a9df8.jpg" alt="Card image cap">
+                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/wednesday/arsenals_arteta_say60ee82808884e.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h6 class="card-title">Players attacked by fans after Dutch league match</h6>
                         <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
