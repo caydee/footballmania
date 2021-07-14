@@ -1,8 +1,19 @@
 <?php
+function add_meta_tags()
+    {
+    echo '<meta http-equiv="refresh" content="650">
+              <meta name="theme-color" content="#f7a81b">              
+              <meta name="Developer:name" content="Dennis Kiptoo Kiptugen" />
+              <meta name="Developer:email" content="dennis.kiptoo@programmer.net" />
+              <meta name="site-live" content="11:00:00 03-09-2020" />
+              <meta name="copyright" content="Football Mania" />
+                 ';
+    }
+add_action('wp_head', 'add_meta_tags');
 remove_action('wp_head','wp_genetrator');
 if (function_exists('add_theme_support'))
     {
-    add_theme_support( 'wigets' );
+    add_theme_support( 'widgets' );
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support('post-thumbnails');
@@ -40,7 +51,34 @@ function add_menuclass($ulclass)
     return preg_replace('/<a /', '<a class="nav-link" ', $ulclass);
     }
 add_filter( 'wp_nav_menu', 'add_menuclass', 10, 1 );
+add_filter( 'excerpt_length', function($length) {
+    return 20;
+} );
+function FootballMania_logo_setup()
+    {
+    $defaults = array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+    }
+add_action( 'after_setup_theme', 'FootballMania_logo_setup' );
+function FootballMania_customizer_setting($wp_customize) {
+// add a setting
+$wp_customize->add_setting('FootballMania_light_logo');
+// Add a control to upload the hover logo
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'FootballMania_light_logo', array(
+    'label' => 'Upload Light Logo',
+    'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
+    'settings' => 'FootballMania_light_logo',
+    'priority' => 8 // show it just below the custom-logo
+)));
+}
 
+add_action('customize_register', 'FootballMania_customizer_setting');
 function custom_cat_templates($template)
     {
     $category = get_category(get_queried_object_id());
