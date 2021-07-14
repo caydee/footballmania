@@ -170,7 +170,25 @@ function get_category_top($catid,$limit,$start=0)
     $myposts = new WP_Query($args);
     return $myposts;
     }
+function FootballMania_login_logo()
+    {
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+    ?>
+        <style type="text/css">
+            body.login div#login h1 a {
+                background-image: url(<?php echo $logo[0]; ?>/assets/images/logo.png);
+                background-size: contain;
+                width: 300px;
+            }
+            .login h1 a {
+                height: 50px!important;
+            }
 
+        </style>
+        <?php
+    }
+add_action('login_enqueue_scripts', 'FootballMania_login_logo');
 function fetch_posts_by_sub_category($parentid, $sub_category_id, $limit, $offset=0)
     {
     $args 	= 	[
