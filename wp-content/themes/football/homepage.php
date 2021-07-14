@@ -2,7 +2,7 @@
 /*
  *  Template Name: Homepage
  *
- *  @Package people daily
+ *  @Package Football Mania
  *
  */
 get_header();

@@ -1,4 +1,13 @@
 <?php
+
+/*
+ *  Template Name: Child Category
+ *
+ *  @Package Football Mania
+ *
+ */
+get_header();
+
 ?>
 <main class="mt-4">
     <div class="container">
@@ -376,4 +385,5 @@
     </div>
 </main>
 <?php
+get_footer();
 ?>

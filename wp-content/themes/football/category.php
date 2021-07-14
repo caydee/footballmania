@@ -1,4 +1,13 @@
 <?php
+
+/*
+ *  Template Name: Category
+ *
+ *  @Package Football Mania
+ *
+ */
+get_header();
+
 ?>
 <main role="main" class=" pt-3 px-2">
     <div class="row justify-content-center">
@@ -672,4 +681,5 @@
     </div>
 </main>
 <?php
+get_footer();
 ?>
