@@ -31,3 +31,10 @@ function breaking_news_checkbox_callback_function( $post )
 
     echo '<input type="checkbox" name="is_breaking_news" value="yes" '.(($isBreakingNews=='yes') ? 'checked="checked"': '').'/> YES';
     }
+add_action( 'widgets_init', 'wpdocs_register_widgets' );
+
+function wpdocs_register_widgets() {
+register_widget( 'Footer1' );
+register_widget( 'Footer2' );
+register_widget( 'Footer3' );
+}
