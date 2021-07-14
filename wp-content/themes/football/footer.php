@@ -2,7 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" alt="image">
+                <?php if( is_active_sidebar( 'footer1' ) ) : ?>
+                    <div class="text">
+                        <?php dynamic_sidebar( 'footer1' ); ?>
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="col-md-4">
 
