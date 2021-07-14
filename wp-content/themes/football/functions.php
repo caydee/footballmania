@@ -170,6 +170,33 @@ function get_category_top($catid,$limit,$start=0)
     $myposts = new WP_Query($args);
     return $myposts;
     }
+function wpmu_register_widgets() {
+register_sidebar( array(
+    'name' => 'Footer-1',
+    'id' => 'footer1',
+    'before_widget' => '<div id="%1$s" class="widget contact-info %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>'
+));
+register_sidebar( array(
+    'name' => 'Footer-2',
+    'id' => 'footer2',
+    'before_widget' => '<div id="%1$s" class="widget contact-info %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>'
+));
+register_sidebar( array(
+    'name' => 'Footer-3',
+    'id' => 'footer3',
+    'before_widget' => '<p>',
+    'after_widget' => '</p>',
+    'before_title' => '',
+    'after_title' => ''
+));
+}
+add_action( 'widgets_init', 'wpmu_register_widgets' );
 function FootballMania_login_logo()
     {
         $custom_logo_id = get_theme_mod( 'custom_logo' );
