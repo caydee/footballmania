@@ -10,7 +10,7 @@ get_header();
 <main role="main" class=" pt-3 px-2">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card-header bg-primary text-light mb-3 border-0">
+            <div class="card-header bg-dark text-light mb-3 border-0">
                 <strong>TOP NEWS</strong>
             </div>
             <div class="card flex-xl-row mb-3 box-shadow">
@@ -29,7 +29,7 @@ get_header();
             </div>
             <div class="card-deck">
                 <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_kenya_sevens_finishe5a9d200d003c0.jpg" alt="Card image cap">
+                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/wednesday/resilient_kenya_lion60ef0dbaeafa0.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h6 class="card-title">Lionel Messi’s brother arrested in gun-drama</h6>
                         <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
