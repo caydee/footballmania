@@ -28,24 +28,23 @@
 
 
         </div>
-        <hr>
-        <div class="bg-dark">
-            <div class="container">
-                <nav class="nav my-4">
+
+    </div>
+    <hr>
+    <div class="bg-dark">
+        <div class="container">
+            <nav class="nav my-4">
                     <span class="navbar-text">
                         © 2021 Football Mania
                     </span>
-                    <a class="nav-link text-muted" href="<?=site_url('page/terms-of-service'); ?>">Terms &amp;
-                        Conditions
-                    </a>
-                    <a class="nav-link text-muted" href="<?=site_url('page/privacy-policy'); ?>">Privacy</a>
-                    <a class="nav-link text-muted" href="<?=site_url('page/contact-us'); ?>">Contact Us</a>
-                </nav>
-            </div>
-
+                <a class="nav-link text-muted" href="<?=site_url('page/terms-of-service'); ?>">Terms &amp;
+                    Conditions
+                </a>
+                <a class="nav-link text-muted" href="<?=site_url('page/privacy-policy'); ?>">Privacy</a>
+                <a class="nav-link text-muted" href="<?=site_url('page/contact-us'); ?>">Contact Us</a>
+            </nav>
         </div>
     </div>
-
 </footer>
 
 
