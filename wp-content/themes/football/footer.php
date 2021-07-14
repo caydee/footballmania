@@ -11,9 +11,19 @@
             </div>
             <div class="col-md-4">
 
+                <?php if( is_active_sidebar( 'footer2' ) ) : ?>
+                    <div class="text">
+                        <?php dynamic_sidebar( 'footer2' ); ?>
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="col-md-4">
 
+                <?php if( is_active_sidebar( 'footer3' ) ) : ?>
+                    <div class="text">
+                        <?php dynamic_sidebar( 'footer3' ); ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <hr>
