@@ -16,32 +16,18 @@
     <button class="navbar-toggler  ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link active" href="<?= get_home_url(); ?>">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Football</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Athletics</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Rugby</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Golf</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Volleyball</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Gossip</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Betting</a>
-            </li>
-        </ul>
-    </div>
+    <?php
+    $args = array(
+        'container_class' 	=>	'collapse navbar-collapse w-100',
+        'container_id'		=>	'navbarSupportedContent',
+        'menu_class'		=>	'navbar-nav ml-md-auto',
+        'menu_id'			=>	'',
+        'theme_location'	=>  'topmenu',
+        'depth'             => 	1,
+        'fallback_cb'		=>	false,
+        'add_li_class'      =>  'nav-item'
+    );
+    wp_nav_menu($args);
+    ?>
+
 </nav>

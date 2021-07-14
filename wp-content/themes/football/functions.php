@@ -319,5 +319,5 @@ function get_parent_category_featured($catid,$limit,$start=0)
     );
     return $data;
     }
-include_once 'theme_option.php';
-include_once 'includes/widget.php';
+include_once __DIR__.'/theme_option.php';
+include __DIR__.'/includes/widget.php';
