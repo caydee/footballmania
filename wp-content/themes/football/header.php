@@ -20,7 +20,7 @@
     $args = array(
         'container_class' 	=>	'collapse navbar-collapse w-100',
         'container_id'		=>	'navbarSupportedContent',
-        'menu_class'		=>	'navbar-nav ml-md-auto',
+        'menu_class'		=>	'navbar-nav ',
         'menu_id'			=>	'',
         'theme_location'	=>  'topmenu',
         'depth'             => 	1,
