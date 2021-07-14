@@ -2,7 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" alt="image">
+                <?php
+                $custom_logo_id = get_theme_mod( 'FootballMania_light_logo' );
+                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                ?>
+                <img src="<?php echo $logo[0]; ?>" alt="image">
                 <?php if( is_active_sidebar( 'footer1' ) ) : ?>
                     <div class="text">
                         <?php dynamic_sidebar( 'footer1' ); ?>
