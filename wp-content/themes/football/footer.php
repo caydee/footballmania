@@ -33,7 +33,7 @@
     <hr>
     <div class="bg-dark">
         <div class="container">
-            <nav class="nav my-4">
+            <nav class="nav">
                     <span class="navbar-text">
                         © 2021 Football Mania
                     </span>
