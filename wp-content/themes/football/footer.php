@@ -6,7 +6,7 @@
                 $logo = get_theme_mod( 'FootballMania_light_logo' );
                 //$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                 ?>
-                <img src="<?php echo $logo; ?>" alt="Football Mania">
+                <img src="<?php echo $logo; ?>" alt="Football Mania" height="50">
                 <?php if( is_active_sidebar( 'footer1' ) ) : ?>
                     <div class="text">
                         <?php dynamic_sidebar( 'footer1' ); ?>
