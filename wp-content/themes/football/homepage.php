@@ -8,7 +8,7 @@
 get_header();
 ?>
 <main role="main" class=" pt-3 px-2">
-    <div class="row justify-content-center">
+    <div class="d-flex justify-content-center">
         <div class="col-md-6">
             <div class="card-header bg-dark text-light mb-3 border-0">
                 <strong>TOP NEWS</strong>
