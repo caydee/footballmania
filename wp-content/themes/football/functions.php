@@ -174,26 +174,26 @@ function wpmu_register_widgets() {
 register_sidebar( array(
     'name' => 'Footer-1',
     'id' => 'footer1',
-    'before_widget' => '<div id="%1$s" class="widget contact-info %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widget-title">',
-    'after_title' => '</h4>'
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h6>',
+    'after_title' => '</h6>'
 ));
 register_sidebar( array(
     'name' => 'Footer-2',
     'id' => 'footer2',
-    'before_widget' => '<div id="%1$s" class="widget contact-info %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widget-title">',
-    'after_title' => '</h4>'
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h6>',
+    'after_title' => '</h6>'
 ));
 register_sidebar( array(
     'name' => 'Footer-3',
     'id' => 'footer3',
-    'before_widget' => '<p>',
-    'after_widget' => '</p>',
-    'before_title' => '',
-    'after_title' => ''
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h6>',
+    'after_title' => '</h6>'
 ));
 }
 add_action( 'widgets_init', 'wpmu_register_widgets' );
