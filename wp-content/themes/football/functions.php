@@ -178,7 +178,7 @@ function FootballMania_login_logo()
     ?>
         <style type="text/css">
             body.login div#login h1 a {
-                background-image: url(<?php echo $logo[0]; ?>/assets/images/logo.png);
+                background-image: url(<?php echo $logo[0]; ?>);
                 background-size: contain;
                 width: 300px;
             }
