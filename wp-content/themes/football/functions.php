@@ -183,7 +183,7 @@ function FootballMania_login_logo()
                 width: 300px;
             }
             .login h1 a {
-                height: 50px!important;
+                height: 80px!important;
             }
 
         </style>
