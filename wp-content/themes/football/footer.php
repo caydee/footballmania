@@ -1,7 +1,7 @@
 <footer class=" text-white pt-5 m-t-3 main-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-12">
+            <div class="col-md-3 col-12">
                 <?php
                 $logo = get_theme_mod( 'FootballMania_light_logo' );
                 //$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
