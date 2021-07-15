@@ -18,7 +18,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         <img src="<?=$logo[0]; ?>" height="100"  alt="Football Mania logo">
     </a>
     <div class="ad">
-        <img src="https://unsplash.it/970/90?image=50" alt="">
+        <img src="https://unsplash.it/970/90?image=random" alt="">
     </div>
 </div>
 <nav class="navbar navbar-expand-md sticky-top  navbar-dark py-0" style="background: #000000;">
