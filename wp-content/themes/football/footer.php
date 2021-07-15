@@ -8,27 +8,19 @@
                 ?>
                 <img src="<?php echo $logo; ?>" alt="Football Mania" height="50">
                 <?php if( is_active_sidebar( 'footer1' ) ) : ?>
-                    <div class="text">
-                        <?php dynamic_sidebar( 'footer1' ); ?>
-                    </div>
+                   <?php dynamic_sidebar( 'footer1' ); ?>
                 <?php endif; ?>
             </div>
 
             <?php if( is_active_sidebar( 'footer2' ) ) : ?>
-                <div class="text">
-                    <?php dynamic_sidebar( 'footer2' ); ?>
-                </div>
+                <?php dynamic_sidebar( 'footer2' ); ?>
             <?php endif; ?>
 
             <?php if( is_active_sidebar( 'footer3' ) ) : ?>
-                <div class="text">
-                    <?php dynamic_sidebar( 'footer3' ); ?>
-                </div>
+                <?php dynamic_sidebar( 'footer3' ); ?>
             <?php endif; ?>
             <?php if( is_active_sidebar( 'footer4' ) ) : ?>
-                <div class="text">
-                    <?php dynamic_sidebar( 'footer4' ); ?>
-                </div>
+               <?php dynamic_sidebar( 'footer4' ); ?>
             <?php endif; ?>
 
 
