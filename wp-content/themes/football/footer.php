@@ -1,7 +1,7 @@
 <footer class=" text-white pt-5 m-t-3 main-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-12">
                 <?php
                 $logo = get_theme_mod( 'FootballMania_light_logo' );
                 //$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -13,22 +13,23 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="col-md-4">
 
-                <?php if( is_active_sidebar( 'footer2' ) ) : ?>
-                    <div class="text">
-                        <?php dynamic_sidebar( 'footer2' ); ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <div class="col-md-4">
+            <?php if( is_active_sidebar( 'footer2' ) ) : ?>
+                <div class="text">
+                    <?php dynamic_sidebar( 'footer2' ); ?>
+                </div>
+            <?php endif; ?>
 
-                <?php if( is_active_sidebar( 'footer3' ) ) : ?>
-                    <div class="text">
-                        <?php dynamic_sidebar( 'footer3' ); ?>
-                    </div>
-                <?php endif; ?>
-            </div>
+            <?php if( is_active_sidebar( 'footer3' ) ) : ?>
+                <div class="text">
+                    <?php dynamic_sidebar( 'footer3' ); ?>
+                </div>
+            <?php endif; ?>
+            <?php if( is_active_sidebar( 'footer4' ) ) : ?>
+                <div class="text">
+                    <?php dynamic_sidebar( 'footer4' ); ?>
+                </div>
+            <?php endif; ?>
 
 
         </div>
