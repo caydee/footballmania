@@ -13,7 +13,7 @@
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ?>
-<div class="navbar sticky-top nav-light justify-content-center d-none d-md-block">
+<div class="navbar sticky-top nav-light justify-content-center d-none d-md-flex">
     <a class="navbar-brand  px-2 " href="<?= get_home_url(); ?>">
         <img src="<?=$logo[0]; ?>" height="100"  alt="Football Mania logo">
     </a>
