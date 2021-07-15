@@ -15,7 +15,7 @@
     $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     ?>
     <a class="navbar-brand  px-2" href="<?= get_home_url(); ?>">
-        <img src="<?=$logo[0]; ?>"  alt="Football Mania logo">
+        <img src="<?=$logo[0]; ?>" height="70"  alt="Football Mania logo">
     </a>
     <button class="navbar-toggler  ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
