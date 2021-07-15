@@ -9,12 +9,18 @@
     ?>
 </head>
 <body>
+<?php
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+?>
+<div class="navbar sticky-top nav-light justify-content-center">
+    <a class="navbar-brand  px-2 d-md-none" href="<?= get_home_url(); ?>">
+        <img src="<?=$logo[0]; ?>"   alt="Football Mania logo">
+    </a>
+</div>
 <nav class="navbar navbar-expand-md sticky-top  navbar-dark py-0" style="background: #000000;">
-    <?php
-    $custom_logo_id = get_theme_mod( 'custom_logo' );
-    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-    ?>
-    <a class="navbar-brand  px-2" href="<?= get_home_url(); ?>">
+
+    <a class="navbar-brand  px-2 d-md-none" href="<?= get_home_url(); ?>">
         <img src="<?=$logo[0]; ?>" height="50"  alt="Football Mania logo">
     </a>
     <button class="navbar-toggler  ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
