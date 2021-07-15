@@ -31,3 +31,38 @@ function breaking_news_checkbox_callback_function( $post )
 
     echo '<input type="checkbox" name="is_breaking_news" value="yes" '.(($isBreakingNews=='yes') ? 'checked="checked"': '').'/> YES';
     }
+function wpmu_register_widgets() {
+register_sidebar( array(
+    'name' => 'Footer-1',
+    'id' => 'footer1',
+    'before_widget' => '<div class="w-100">',
+    'after_widget' => '</div>',
+    'before_title' => '<h6 class="fw-600">',
+    'after_title' => '</h6>'
+));
+register_sidebar( array(
+    'name' => 'Footer-2',
+    'id' => 'footer2',
+    'before_widget' => '<div class="col-12 col-md-3">',
+    'after_widget' => '</div>',
+    'before_title' => '<h6 class="fw-600">',
+    'after_title' => '</h6>'
+));
+register_sidebar( array(
+    'name' => 'Footer-3',
+    'id' => 'footer3',
+    'before_widget' => '<div class="col-12 col-md-3">',
+    'after_widget' => '</div>',
+    'before_title' => '<h6 class="fw-600">',
+    'after_title' => '</h6>'
+));
+register_sidebar( array(
+    'name' => 'Footer-4',
+    'id' => 'footer4',
+    'before_widget' => '<div class="col-12 col-md-3">',
+    'after_widget' => '</div>',
+    'before_title' => '<h6 class="fw-600">',
+    'after_title' => '</h6>'
+));
+}
+add_action( 'widgets_init', 'wpmu_register_widgets' );
