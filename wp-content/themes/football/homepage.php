@@ -38,7 +38,7 @@ get_header();
                                     </div>
                                     <div class="card-deck">';
 						    }
-						else if($x >=2 || $x<=4)
+						else if($x >=2 && $x<=4)
 						    {
 						        echo '<div class="card box-shadow mb-3">
                                         <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">' .
