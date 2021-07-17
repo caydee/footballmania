@@ -116,7 +116,7 @@ if(have_posts() & is_singular())
     wp_reset_postdata();
     }
 ?>
-</div>
+
 
                     <h6>MORE STORIES</h6>
                     <div class="card-deck">
