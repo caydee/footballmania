@@ -4,9 +4,7 @@ $ads_category = "";
 
 <section class="row">
     <div class="col-12 col-md-8">
-		<div class="row">
-			<?php k24_the_breadcrumb(); ?>
-		</div>
+
 		
 		<div class="row">
 			<div class="col-12 mb-3">
@@ -116,7 +114,7 @@ $ads_category = "";
 										By <b><?=get_the_author_posts_link();?></b> | <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
 									</small>
 								</p>
-								<p class="d-none d-md-block font-15"><?=k24_limit_characters(get_the_excerpt(), 150)."...";?></p>
+								<p class="d-none d-md-block font-15"><?=get_the_excerpt()."...";?></p>
 							</div>
 						</div>
 					<?php
@@ -148,26 +146,9 @@ $ads_category = "";
 		
     </div>
     <div class="col-12 col-md-4">
-		<h3 class="cattitle font-18 px-0 mb-3 font-md-20">Follow us on</h3>
-		<aside class="d-flex mb-4 social p-0">
-			<?php k24_embed_social_media_icons(); ?>
-		</aside>
-        <div class="d-flex justify-content-center order-md-1 order-2 ad py-2 mb-4">
-            <?=stripslashes(get_option("k24_".$ads_category."_rightpanel_1"));?>
-        </div>
-        <aside class="mt-2 order-md-2 order-1 mb-4">
-            <?php k24_sidebar_template("", 5, 0);?>
-        </aside>
-		<div class="col-md-6 col-lg-12  order-md-2 order-lg-1 mb-4 p-0">
-            <div class="d-flex justify-content-center mb-2 mt-3 ad py-md-2">
-                <?=stripslashes(get_option("k24_".$ads_category."_rightpanel_2"));?>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-12 order-md-1 order-lg-2 mb-4 p-0">
-            <div class="opinion">
-                <?php k24_sidebar_template("opinion", 5, 0);?>
-            </div>
-        </div>
+		<?php
+        get_template_part('/template_part/sidebar-tables');
+		?>
     </div>
 </section>
 
