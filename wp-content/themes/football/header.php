@@ -12,6 +12,7 @@
 <?php
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+$l_logo = get_theme_mod( 'FootballMania_light_logo' );
 ?>
 <header>
     <div class="navbar  nav-light bg-light justify-content-between d-none d-md-flex">
@@ -25,7 +26,8 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     <nav class="navbar navbar-expand-md navbar-dark py-0 bg-black" >
 
         <a class="navbar-brand  px-2 d-md-none" href="<?= get_home_url(); ?>">
-            <img src="<?=$logo[0]; ?>" height="50"  alt="Football Mania logo">
+            <img src="<?=$logo[0]; ?>" height="50"  class="d-none d-md-block"  alt="Football Mania logo">
+            <img src="<?=$l_logo; ?>" height="50"  class="d-md-none d-block"  alt="Football Mania logo">
         </a>
         <button class="navbar-toggler  ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
