@@ -11,7 +11,7 @@ get_header();
 ?>
 <main role="main" class=" pt-3 px-2">
     <div class="row justify-content-center">
-        <div class="col-12 mt-12">
+        <div class="col-12 my-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
