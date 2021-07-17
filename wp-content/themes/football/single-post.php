@@ -12,7 +12,7 @@ if(have_posts() & is_singular())
     {
     while(have_posts()):the_post();
 
-    echo '<main class="container-fluid">
+    echo '<main class="container">
 <div class="row">
 
 			<div class="col-12 col-md-8">
