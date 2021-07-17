@@ -9,9 +9,8 @@
 get_header();
 ?>
 <!-- Start Page Title Area -->
-<div class="page-title-area item-bg-6">
-    <div class="d-table">
-        <div class="d-table-cell">
+<div class="row my-3">
+
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -20,8 +19,7 @@ get_header();
                     </ol>
                 </nav>
             </div>
-        </div>
-    </div>
+
 </div>
 <!-- End Page Title Area -->
 
