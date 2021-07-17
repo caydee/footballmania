@@ -397,8 +397,9 @@ function home_top($limit,$start=0)
 
     $sticky 		= 	get_option( 'sticky_posts' );
     rsort($sticky);
-    $sticky 		= 	array_slice( $sticky, $start, $limit );
-    $data 			= 	new WP_Query(['post__in' => $sticky, 'ignore_sticky_posts' => 1 ]);
+
+    $data 			= 	new WP_Query(['post__in' => $sticky, 'ignore_sticky_posts' => 1 ,'posts_per_page' 		=> 	$limit,
+        'offset'           		=> 	$start]);
     return $data;
     }
 function get_home_latest($limit,$start=0)
