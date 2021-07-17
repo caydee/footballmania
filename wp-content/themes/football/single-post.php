@@ -161,29 +161,31 @@ if(have_posts() & is_singular())
 
 </div>
 
-                    <h6>MORE STORIES</h6>
+                    <h3>Related Posts</h3>
                     <div class="card-deck">
+                        <?php
+                        $data = home_top(3);
+
+                        if($data->have_posts())
+                        {
+                        while ( $data->have_posts() ) : $data->the_post();
+                        echo'
                         <div class="card box-shadow mb-3">
-                            <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_kenya_sevens_finishe5a9d200d003c0.jpg" alt="Card image cap">
+                            <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">
+                                ' . get_the_post_thumbnail($post->ID,'popular', ['class'=>'w-100 img-fluid'] ) .'
+                            </a>    
                             <div class="card-body">
-                                <h6 class="card-title">Lionel Messi’s brother arrested in gun-drama</h6>
+                                <h6 class="card-title">
+                                    <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post->ID ).'</a>
+                                </h6>
                                 <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
                             </div>
-                        </div>
-                        <div class="card box-shadow mb-3">
-                            <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_manchester_united_sq5a9cdb4360671.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h6 class="card-title">KPL preview: Ssimbwa, Pamzo meet for the first time since Narok bust up as Gor host Bandari</h6>
-                                <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/thumb_im_a_warrior5a9cfa70a9df8.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h6 class="card-title">Players attacked by fans after Dutch league match</h6>
-                                <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                            </div>
-                        </div>
+                        </div>';
+                        endwhile;
+                        wp_reset_postdata();
+                        }
+                        ?>
+
                     </div>
                  </div>
             <div class="col-md-4 ">
