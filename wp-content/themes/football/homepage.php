@@ -14,7 +14,7 @@ get_header();
                 <strong>TOP NEWS</strong>
             </div>
             <?php
-				$data = home_top(1,2);
+				$data = home_top(6);
 				$x    = 1;
 				if($data->have_posts())
 					{
