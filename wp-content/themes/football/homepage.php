@@ -151,11 +151,10 @@ get_header();
                                 <div class="card-deck">';
                 }
             $x++;
-            if($x%7==0 )
+            if($x == 6 )
                 {
                     $x = 1;
-                    echo '</div>
-</div>';
+                    echo '</div>';
                 }
             endwhile;
             wp_reset_postdata();
