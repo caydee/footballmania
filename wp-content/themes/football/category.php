@@ -11,28 +11,12 @@ get_header();
 ?>
 <main role="main" class=" pt-3 px-2">
     <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="display-4 category-title mb-3">FOOTBALL</div>
-            <nav class="navbar navbar-expand navbar-dark bg-dark box-shadow sub-nav py-0 mb-3">
-                <div class="navbar-scroll mr-auto ">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./category">World Cup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./category">Premier League</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./category">Champions League</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./category">Europa Cup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./category">Gosssip</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="col-12 mt-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
             </nav>
         </div>
         <div class="col-md-6">
