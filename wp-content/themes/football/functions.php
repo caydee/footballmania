@@ -398,8 +398,7 @@ function home_top($limit,$start=0)
     $sticky 		= 	get_option( 'sticky_posts' );
     rsort($sticky);
 
-    $data 			= 	new WP_Query(['post__in' => $sticky, 'ignore_sticky_posts' => 1 ,'posts_per_page' 		=> 	$limit,
-        'offset'           		=> 	$start]);
+    $data 			= 	new WP_Query([ 'post__in' => $sticky , 'ignore_sticky_posts' => 1 , 'posts_per_page' => $limit , 'offset' => $start , 'orderby' => 'date' , 'order' => 'DESC' ]);
     return $data;
     }
 function get_home_latest($limit,$start=0)
@@ -413,7 +412,8 @@ function get_home_latest($limit,$start=0)
         'orderby'             	=> 	'date',
         'order'             	=> 	'DESC',
         'posts_per_page' 		=> 	$limit,
-        'offset'           		=> 	$start
+        'offset'           		=> 	$start,
+
     ]);
     return $data;
     }
