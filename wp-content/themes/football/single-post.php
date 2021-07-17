@@ -8,86 +8,115 @@
  */
 get_header();
 
+if(have_posts() & is_singular())
+    {
+    while(have_posts()):the_post();
+
+    echo '
+<section class="row">
+			<div class="col-12 col-md-8">
+				<article id="content" class="montserrat">
+					<h1 class="nunito fw-900">
+						'.get_the_title( $post ).'
+					</h1>
+					
+					<div class="d-flex justify-content-between">
+						<small class="text-pdgreen">By
+						 '.get_the_author().' 
+						<a href="" class="text-pdgreen">
+						</a> | June 11<sup>th</sup> 2019</small>
+						<div class="share">
+							Share
+	                        <a href="" class="mx-2 text text-facebook social">
+	                            <span class="fab fa-facebook fa-2x"></span>
+	                        </a>
+	                        <a href="" class="mx-2 text text-twitter social">
+	                            <span class="fab fa-twitter fa-2x"></span>
+	                        </a>
+	                        <a href="" class="mx-2 text text-linkedin social">
+	                            <span class="fab fa-linkedin fa-2x"></span>
+	                        </a>
+	                        <a href="" class="mx-2 text text-whatsapp social">
+	                            <span class="fab fa-whatsapp fa-2x"></span>
+	                        </a>
+	                        <a href="" class="mx-2 text text-mail social">
+	                            <span class="fas fa-envelope fa-2x"></span>
+	                        </a>
+	                        <a href="" class="mx-2 text text-telegram social">
+	                            <span class="fab fa-telegram fa-2x"></span>
+	                        </a>
+						</div>
+					</div>
+					<figure class="position-relative">
+						' . get_the_post_thumbnail($post,array(500,800), ['class'=>'w-100 img-fluid'] ) .'
+						<figcaption class="d-flex justify-content-center font-12 position-absolute w-100 bottom-0">
+							'.wp_get_attachment_caption(get_post_thumbnail_id()).'
+						</figcaption>
+					</figure>
+					
+						';
+    $in_summary = get_post_meta( $post->ID, 'in_summary', true );
+    if($in_summary)
+        {
+
+        echo'<div class="summary float-left border-right mr-3 mb-3">
+		                    <strong class="text-danger text-center">
+									Summary
+							</strong>
+		                    <div class="text-dark">
+		                        <ul class="font-italic font-12 px-2">';
+
+        $in_summary = str_replace("<p>", "<li>", $in_summary);
+        $in_summary = str_replace("</p>", "</li>", $in_summary);
+        echo $in_summary.'
+		                           
+		                        </ul>
+		                    </div>
+	                    </div>';
+
+        }
+
+
+
+
+    echo get_the_content();
+
+    if(get_the_tag_list()) {
+    echo get_the_tag_list('<ul class="related-topics list-unstyled d-flex justify-content-start flex-wrap"><li class="mr-2 mt-2">','</li><li class="mr-2 mt-2">','</li></ul>');
+    }
+    echo '
+					<div class="d-flex justify-content-start">
+						Share
+                        <a href="" class="mx-2 text text-facebook social">
+                            <span class="fab fa-facebook fa-2x"></span>
+                        </a>
+                        <a href="" class="mx-2 text text-twitter social">
+                            <span class="fab fa-twitter fa-2x"></span>
+                        </a>
+                        <a href="" class="mx-2 text text-linkedin social">
+                            <span class="fab fa-linkedin fa-2x"></span>
+                        </a>
+                        <a href="" class="mx-2 text text-whatsapp social">
+                            <span class="fab fa-whatsapp fa-2x"></span>
+                        </a>
+                        <a href="" class="mx-2 text text-mail social">
+                            <span class="fas fa-envelope fa-2x"></span>
+                        </a>
+                        <a href="" class="mx-2 text text-telegram social">
+                            <span class="fab fa-telegram fa-2x"></span>
+                        </a>
+					</div>
+					<div class="promoted-posts clearfix">
+						<strong>From the web</strong>
+					</div>
+					<div class="fb-comments" data-href="'.get_the_permalink().'" data-width="100%" data-numposts="30"></div>
+				</article>
+				
+			</div>';
+    endwhile;
+    wp_reset_postdata();
+    }
 ?>
-<div class="container-fluid">
-
-    <main role="main" class="pt-3 px-2">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <article>
-                    <h1 class="mb-4">Six Nations 2018: England captain Dylan Hartley a doubt for France game</h1>
-                    <div class="small text-muted mb-3">By<a href="#"> Cyrus Ombati:</a> <span>February 8th 2018 |</span> <a href="#" class="text-primary"><strong>Football</strong></a></div>
-
-                    <div class="social-share">
-
-                        <div class="btn-group  btn-group-sm w-100" role="group" aria-label="socialmediasharebuttons">
-                            <a href="" class="btn btn-facebook btn-block mt-0"><span data-feather="facebook"></span> share </a>
-                            <a href="" class="btn btn-twitter  btn-block mt-0"><span data-feather="twitter"></span> tweet</a>
-                            <div class="btn-group  btn-group-sm w-100" role="group"">
-                            <button type="button" class="btn btn-success btn-block mt-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-share fa-fw"></i> Share
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <h6 class="dropdown-header">Share this with</h6>
-                                <a class="dropdown-item" href="#"><span data-feather="facebook"></span> Facebook</a>
-                                <a class="dropdown-item" href="#"><span data-feather="twitter"></span> Twitter</a>
-                                <a class="dropdown-item" href="#"><span data-feather="mail"></span> Email</a>
-                                <a class="dropdown-item" href="#"><span data-feather="plus-circle"></span> Google Plus</a>
-                                <a class="dropdown-item" href="#"><span data-feather="linkedin"></span> Linkedin</a>
-                            </div>
-                        </div>
-                    </div>
-
-                <figure>
-                    <a href=""><img src="https://cdn.standardmedia.co.ke/images/wednesday/thumb_ahufj3bqt56avm4yjc5a9f9f8e1d2c3.jpg" class="img-fluid w-100" alt=""></a>
-                    <figcaption class="bg-light p-2">NASA Presidential Candidate Raila Odinga Adviser Salim Lone addresses the media at OKOA Kenya office in Nairobi on Monday 10/07/17 [photo by Boniface Okendo/Standard]</figcaption>
-                </figure>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veritatis dolores fugiat cum vero repellat, nobis similique quo aliquid quia ducimus quod labore facilis, molestiae! Laudantium fugiat exercitationem excepturi eaque?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veritatis dolores fugiat cum vero repellat, nobis similique quo aliquid quia ducimus quod labore facilis, molestiae! Laudantium fugiat exercitationem excepturi eaque?</p>
-                <div class="card box-shadow mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Lionel Messi’s brother arrested in gun-drama</h5>
-                        <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veritatis dolores fugiat cum vero repellat, nobis similique quo aliquid quia ducimus quod labore facilis, molestiae! Laudantium fugiat exercitationem excepturi eaque?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veritatis dolores fugiat cum vero repellat, nobis similique quo aliquid quia ducimus quod labore facilis, molestiae! Laudantium fugiat exercitationem excepturi eaque</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veritatis dolores fugiat cum vero repellat, nobis similique quo aliquid quia ducimus quod labore facilis, molestiae! Laudantium fugiat exercitationem excepturi eaque?</p>
-
-                <div class="card box-shadow mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Lionel Messi’s brother arrested in gun-drama</h5>
-                        <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veritatis dolores fugiat cum vero repellat, nobis similique quo aliquid quia ducimus quod labore facilis, molestiae! Laudantium fugiat exercitationem excepturi eaque?</p>
-                <div class="mb-3">
-                    <span class="h6">Related Topics: </span>
-                    <a href="./archive" class=" badge badge-light">raila odinga</a>
-                    <a href="./archive" class=" badge badge-light">canaan</a>
-                    <a href="./archive" class=" badge badge-light">uhuru kenyatta</a>
-                    <a href="./archive" class=" badge badge-light">cholera</a>
-                </div>
-                <div class="social-share mb-3">
-
-                    <div class="btn-group  btn-group-sm w-100" role="group" aria-label="socialmediasharebuttons">
-                        <a href="" class="btn btn-facebook btn-block mt-0"><span data-feather="facebook"></span> share </a>
-                        <a href="" class="btn btn-twitter  btn-block mt-0"><span data-feather="twitter"></span> tweet</a>
-                        <div class="btn-group  btn-group-sm w-100" role="group"">
-                        <button type="button" class="btn btn-success btn-block mt-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-share fa-fw"></i> Share
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <h6 class="dropdown-header">Share this with</h6>
-                            <a class="dropdown-item" href="#"><span data-feather="facebook"></span> Facebook</a>
-                            <a class="dropdown-item" href="#"><span data-feather="twitter"></span> Twitter</a>
-                            <a class="dropdown-item" href="#"><span data-feather="mail"></span> Email</a>
-                            <a class="dropdown-item" href="#"><span data-feather="plus-circle"></span> Google Plus</a>
-                            <a class="dropdown-item" href="#"><span data-feather="linkedin"></span> Linkedin</a>
-                        </div>
-                    </div>
-                </div>
                     <div class="comments mb-3">
                         <button class="btn btn-outline-secondary btn-block">LOAD COMMENTS</button>
                     </div>
