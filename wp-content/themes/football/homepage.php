@@ -160,8 +160,7 @@ get_header();
             wp_reset_postdata();
             }
         ?>
-        </div>
-    </div>
+
             <nav aria-label="page navigation" class="mx-auto">
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
