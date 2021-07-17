@@ -14,7 +14,7 @@ get_header();
                 <strong>TOP NEWS</strong>
             </div>
             <?php
-				$data = home_top(6);
+				$data = home_top(8);
 				$x    = 1;
 				if($data->have_posts())
 					{
@@ -74,7 +74,7 @@ get_header();
                                         </div>
                                     </div>';
 						    }
-                        $x++;
+                            $x++;
 							endwhile;
 						wp_reset_postdata();
 					}
