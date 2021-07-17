@@ -216,24 +216,7 @@ if($data->have_posts())
     wp_reset_postdata();
     }
 ?>
-    <div class="card box-shadow mb-3">
-        <a href=""><img class="card-img-top" src="https://cdn.standardmedia.co.ke/images/sunday/thumb_rugby_sevens_vlez5a9c5dc27fdda.jpg" alt="Card image cap"></a>
-        <div class="card-body">
-            <h5>
-                <a class="text-dark card-link" href="#">KPL preview: Ssimbwa, Pamzo meet for the first time since Narok bust up as Gor host Bandari</a>
-            </h5>
-            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-        </div>
-    </div>
-    <div class="card box-shadow mb-3">
-        <a href=""><img class="card-img-top" src="https://cdn.standardmedia.co.ke/images/sunday/thumb_rugby_sevens_vlez5a9c5dc27fdda.jpg" alt="Card image cap"></a>
-        <div class="card-body">
-            <h5>
-                <a class="text-dark card-link" href="#">KPL preview: Ssimbwa, Pamzo meet for the first time since Narok bust up as Gor host Bandari</a>
-            </h5>
-            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-        </div>
-    </div>
+
     <div class="card box-shadow mb-3 ">
         <div class="card-header">
             <strong>MORE POPULAR HEADLINES</strong>
