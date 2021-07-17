@@ -21,17 +21,17 @@ get_header();
 						while ( $data->have_posts() ) : $data->the_post();
 						if($x == 1)
 						    {
-						       var_dump($post->ID);
+
 						        echo '<div class="card flex-xl-row mb-3 box-shadow">
-                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'" class="w-100">
-                                            ' . get_the_post_thumbnail($post,"first", ['class'=>'w-100 img-fluid'] ) .'
+                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID).'" class="w-100">
+                                            ' . get_the_post_thumbnail($post->ID,"first", ['class'=>'w-100 img-fluid'] ) .'
                                         </a>
                         
                                         <div class="card-body">
                                             <h1 class="h2">
-                                                <a class="text-dark card-link" href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">	'.get_the_title( $post ).'</a>
+                                                <a class="text-dark card-link" href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post ).'</a>
                                             </h1>
-                                            <p class="card-text mb-auto">'.get_the_excerpt($post).'</p>
+                                            <p class="card-text mb-auto">'.get_the_excerpt($post->ID).'</p>
                                             <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
                                         </div>
                         
@@ -41,13 +41,13 @@ get_header();
 						else if($x >=2 || $x<=4)
 						    {
 						        echo '<div class="card box-shadow mb-3">
-                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">' .
-                                    get_the_post_thumbnail($post,'second', ['class'=>'w-100 img-fluid'] ) .'</a>    
+                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">' .
+                                    get_the_post_thumbnail($post->ID,'second', ['class'=>'w-100 img-fluid'] ) .'</a>    
                                         
                                         <div class="card-body">
                                             <h6 class="card-title">
-                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">
-                                                	'.get_the_title( $post ).'
+                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">
+                                                	'.get_the_title( $post->ID ).'
                                                 </a>
                                             </h6>
                                             <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
@@ -62,12 +62,12 @@ get_header();
 						else if($x > 4)
 						    {
 						        echo '<div class="card box-shadow mb-3">
-                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">
-                                            ' . get_the_post_thumbnail($post,array(500,800), ['class'=>'w-100 img-fluid'] ) .'
+                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">
+                                            ' . get_the_post_thumbnail($post->ID,array(500,800), ['class'=>'w-100 img-fluid'] ) .'
                                         </a>                                        
                                         <div class="card-body">
                                             <h6 class="card-title">
-                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">	'.get_the_title( $post ).'</a>
+                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post->ID ).'</a>
                                             </h6>
                                             <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
                                         </div>
