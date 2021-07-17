@@ -75,10 +75,11 @@ add_action( 'init', 'register_my_menu' );
 function custom_css()
     {
         $output = apply_filters( 'bam_head_css', $output ); ?>
-
+        ?>
         <style type="text/css" id="theme-custom-css">
             <?php echo wp_strip_all_tags( $output ); ?>
         </style>
+        <?php
 
         }
 function add_classes_on_li($classes, $item, $args)
