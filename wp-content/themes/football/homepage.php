@@ -151,7 +151,7 @@ get_header();
                                 <div class="card-deck">';
                 }
             $x++;
-            if($x == 7 )
+            if($x%7==0 )
                 {
                     $x = 1;
                     echo '</div>';
