@@ -9,9 +9,9 @@
 get_header();
 ?>
 <!-- Start Page Title Area -->
-<div class="row my-3">
+<div class="container-fluid my-3">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
+        <ol class="breadcrumb w-100">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Library</li>
         </ol>
