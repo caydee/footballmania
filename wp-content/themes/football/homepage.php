@@ -154,7 +154,8 @@ get_header();
             if($x%7==0 )
                 {
                     $x = 1;
-                    echo '</div>';
+                    echo '</div>
+</div>';
                 }
             endwhile;
             wp_reset_postdata();
