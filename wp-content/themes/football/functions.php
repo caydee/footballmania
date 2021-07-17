@@ -1,15 +1,16 @@
 <?php
 function add_meta_tags()
     {
-    echo '<meta http-equiv="refresh" content="650">
-              <meta name="theme-color" content="#f7a81b">              
-              <meta name="Developer:name" content="Dennis Kiptoo Kiptugen" />
-              <meta name="Developer:email" content="dennis.kiptoo@programmer.net" />
-              <meta name="site-live" content="11:00:00 03-09-2020" />
-              <meta name="copyright" content="Football Mania" />
-                 ';
+        echo '<meta http-equiv="refresh" content="650">
+                  <meta name="theme-color" content="#f7a81b">              
+                  <meta name="Developer:name" content="Dennis Kiptoo Kiptugen" />
+                  <meta name="Developer:email" content="dennis.kiptoo@programmer.net" />
+                  <meta name="site-live" content="11:00:00 03-09-2020" />
+                  <meta name="copyright" content="Football Mania" />
+                     ';
     }
 add_action('wp_head', 'add_meta_tags');
+
 remove_action('wp_head','wp_genetrator');
 if (function_exists('add_theme_support'))
     {
@@ -54,11 +55,13 @@ if (function_exists('add_theme_support'))
         'flex-height' => true,
     ) );
 
-    add_image_size('large', 730, '', true); //Large Thumbnail
-    add_image_size('medium', 480, '', true); //Medium Thumbnail
-    add_image_size('small', 225, '', true); //Small Thumbnail
-    add_image_size('xsmall', 115, '', true); //Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); //Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('large', 800, 500, true); //Large Thumbnail
+    add_image_size('medium', 480, 300, true); //Medium Thumbnail
+    add_image_size('small', 225, 140, true); //Small Thumbnail
+    add_image_size('xsmall', 115, 72, true); //Small Thumbnail
+    add_image_size('first',212,210,true);
+    add_image_size('popular',304,206,true);
+    add_image_size('second',190,130,true);
     }
 function import_scripts()
     {
@@ -71,8 +74,8 @@ add_action( 'wp_enqueue_scripts', 'import_scripts');
 
 function register_my_menu()
     {
-    register_nav_menu('topmenu',__( 'Primary  Menu','people-daily' ));
-    register_nav_menu('social_menu',__( 'Social Menu','social-media' ));
+    register_nav_menu('topmenu',__( 'Primary  Menu','footballmania' ));
+    register_nav_menu('social_menu',__( 'Social Menu','footballmania' ));
     }
 add_action( 'init', 'register_my_menu' );
 function custom_css($output)
@@ -87,14 +90,18 @@ function custom_css($output)
         }
 function add_classes_on_li($classes, $item, $args)
     {
-    $classes[] = 'nav-item';
-    return $classes;
+        $classes[] = 'nav-item';
+        if (in_array('current-menu-item', $classes) )
+            {
+            $classes[] = 'active ';
+            }
+        return $classes;
     }
 add_filter('nav_menu_css_class','add_classes_on_li',1,3);
 
 function add_menuclass($ulclass)
     {
-    return preg_replace('/<a /', '<a class="nav-link" ', $ulclass);
+        return preg_replace('/<a /', '<a class="nav-link" ', $ulclass);
     }
 add_filter( 'wp_nav_menu', 'add_menuclass', 10, 1 );
 add_filter( 'excerpt_length', function($length) {
