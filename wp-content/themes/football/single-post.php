@@ -12,12 +12,13 @@ if(have_posts() & is_singular())
     {
     while(have_posts()):the_post();
 
-    echo '
-<section class="row">
+    echo '<main class="container-fluid">
+<div class="row">
+
 			<div class="col-12 col-md-8">
 				<article id="content" class="montserrat">
 					<h1 class="nunito fw-900">
-						'.get_the_title( $post ).'
+						'.get_the_title( $post->ID ).'
 					</h1>
 					
 					<div class="d-flex justify-content-between">
@@ -143,7 +144,7 @@ if(have_posts() & is_singular())
                         </div>
                     </div>
                  </div>
-            <div class="col-md-3 ">
+            <div class="col-md-4 ">
     <div class="card-header bg-dark text-light mb-3 border-0">
         <strong>POPULAR HEADLINES</strong>
     </div>
@@ -196,7 +197,7 @@ if(have_posts() & is_singular())
         </div>
     </main>
 
-</div>
+
 <?php
 get_footer();
 ?>
