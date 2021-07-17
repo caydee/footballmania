@@ -22,7 +22,7 @@ get_header();
 						if($x == 1)
 						    {
 
-						        echo '<div class="card flex-xl-row mb-3 box-shadow">
+						        echo '<div class="card flex-xl-row align-items-center mb-3 box-shadow">
                                         <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID).'" class="w-100">
                                             ' . get_the_post_thumbnail($post->ID,'large', ['class'=>'w-100 img-fluid']
                                     ) .'
