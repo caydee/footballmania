@@ -401,6 +401,7 @@ function home_top($limit,$start=0)
     $data 			= 	new WP_Query([ 'post__in' => $sticky , 'ignore_sticky_posts' => 1 , 'posts_per_page' => $limit , 'offset' => $start , 'orderby' => 'date' , 'order' => 'DESC' ]);
     return $data;
     }
+require_once get_parent_theme_file_path( '/theme_part/comments.php' );
 function get_home_latest($limit,$start=0)
     {
     $sticky 		= 	get_option( 'sticky_posts' );
