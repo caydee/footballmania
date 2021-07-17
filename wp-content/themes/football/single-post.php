@@ -160,8 +160,9 @@ if(have_posts() & is_singular())
     </div>
 
 </div>
-
-                    <h3>Related Posts</h3>
+<div class="card-header bg-dark text-light mb-3 border-0">
+                    <strong>Related Posts</strong>
+</div>
                     <div class="card-deck">
                         <?php
                         $data = home_top(3);
@@ -192,15 +193,29 @@ if(have_posts() & is_singular())
     <div class="card-header bg-dark text-light mb-3 border-0">
         <strong>POPULAR HEADLINES</strong>
     </div>
+<?php
+$data = trending_posts(3);
+
+if($data->have_posts())
+    {
+    while ( $data->have_posts() ) : $data->the_post();
+    echo'
     <div class="card box-shadow mb-3">
-        <a href=""><img class="card-img-top" src="https://cdn.standardmedia.co.ke/images/monday/thumb_fa_reveals_why_pep_g5a9cf1b4392ef.jpg" alt="Card image cap"></a>
+        <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">
+        ' . get_the_post_thumbnail($post->ID,'popular', ['class'=>'w-100 img-fluid'] ) .'
+        </a>    
         <div class="card-body">
             <h5>
-                <a class="text-dark card-link" href="#">Lionel Messi’s brother arrested in gun-drama</a>
+                <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post->ID ).'</a>  
             </h5>
             <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
         </div>
     </div>
+    ';
+    endwhile;
+    wp_reset_postdata();
+    }
+?>
     <div class="card box-shadow mb-3">
         <a href=""><img class="card-img-top" src="https://cdn.standardmedia.co.ke/images/sunday/thumb_rugby_sevens_vlez5a9c5dc27fdda.jpg" alt="Card image cap"></a>
         <div class="card-body">
