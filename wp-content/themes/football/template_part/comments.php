@@ -31,7 +31,7 @@ switch ( $comment->comment_type ) :
                 // Display avatar unless size is set to 0
                 if ( $args['avatar_size'] != 0 ) {
                 $avatar_size = ! empty( $args['avatar_size'] ) ? $args['avatar_size'] : 70; // set default avatar size
-                echo get_avatar( $comment, $avatar_size );
+                echo get_avatar( $comment, 20 );
                 }
                 // Display author name
                 printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>', 'textdomain' ), get_comment_author_link() ); ?>
@@ -46,7 +46,7 @@ switch ( $comment->comment_type ) :
                             get_comment_time()
                         ); ?>
                     </a><?php
-                    edit_comment_link( __( '(Edit)', 'textdomain' ), '  ', '' ); ?>
+                    edit_comment_link( __( '(Edit)', 'footballmania' ), '  ', '' ); ?>
                 </div><!-- .comment-meta -->
                 <div class="comment-text"><?php comment_text(); ?></div><!-- .comment-text -->
                 <?php
