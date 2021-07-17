@@ -32,7 +32,7 @@ get_header();
                                             <h1 class="h2">
                                                 <a class="text-dark card-link" href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post ).'</a>
                                             </h1>
-                                            <p class="card-text mb-auto">'.substr(get_the_excerpt($post->ID),0,15).'...</p>
+                                            <p class="card-text mb-auto">'.substr(get_the_excerpt($post->ID),0,100).'...</p>
                                             <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
                                         </div>
                         
