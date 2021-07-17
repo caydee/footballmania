@@ -22,11 +22,19 @@ get_header();
 
 <!-- Start Inner Privacy Policy Area -->
 <section class="privacy-policy pt-100 pb-160">
-    <div class="container">
-        <div class="single-privacy">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="single-privacy col-12 col-md-9">
 
-            <?=get_the_content(); ?>
+                <?=get_the_content(); ?>
+            </div>
+            <div class="col-12 col-md-3">
+                <?php
+                get_template_part('template_part/sidebar-tables');
+                ?>
+            </div>
         </div>
+
     </div>
 </section>
 <?php
