@@ -113,7 +113,7 @@ if(have_posts() & is_singular())
 				
 			';
     if ( comments_open() || get_comments_number() ) :
-        comments_template(__DIR__.'/template_part/comments.php');
+        comments_template();
     endif;
     endwhile;
     wp_reset_postdata();
