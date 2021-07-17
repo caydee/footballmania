@@ -142,7 +142,7 @@ if(have_posts() & is_singular())
                             </div>
                         </div>
                     </div>
-
+                 </div>
             <div class="col-md-3 ">
     <div class="card-header bg-dark text-light mb-3 border-0">
         <strong>POPULAR HEADLINES</strong>
