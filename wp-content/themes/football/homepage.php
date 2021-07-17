@@ -46,7 +46,8 @@ get_header();
                                         
                                         <div class="card-body">
                                             <h6 class="card-title">
-                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">
+                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID )
+                                    .'" class="text text-dark">
                                                 	'.get_the_title( $post->ID ).'
                                                 </a>
                                             </h6>
