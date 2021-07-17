@@ -36,7 +36,7 @@ switch ( $comment->comment_type ) :
                 echo get_avatar( $comment, 20 );
                 }
                 // Display author name
-                printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>', 'footballmania' ),
+                printf( __( '<cite class="fn">%s</cite>', 'footballmania' ),
                     get_comment_author_link() ); ?>
             </div><!-- .comment-author -->
             <div class="comment-details">
