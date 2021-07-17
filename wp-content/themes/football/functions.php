@@ -402,12 +402,16 @@ function home_top($limit,$start=0)
     return $data;
     }
 function custom_submit_comment_form( $submit_button ) {
-return '<input name="submit" type="submit" id="submit" class="btn btn-primary" value="Comment" />';
+return '<div class="form-group form-row"><input name="submit" type="submit" id="submit" class="btn btn-primary ml-auto" value="Comment" /></div>';
 }
 add_filter( 'comment_form_submit_button', 'custom_submit_comment_form' );
 function wpsites_modify_comment_form_text_area($arg) {
-$arg['comment_field'] = '<p class="comment-form-comment"><label for="comment" class="control-label">' . _x( 'Your Feedback Is 
-Appreciated', 'noun' ) . '</label><textarea id="comment" name="comment" class="form-control" aria-required="true"></textarea></p>';
+$arg['comment_field'] = '<p class="comment-form-comment">
+                            <label for="comment" class="control-label">
+                            ' . _x( 'Your Feedback Is Appreciated', 'noun' ) . '
+                            </label>
+                            <textarea id="comment" name="comment" class="form-control" aria-required="true"></textarea>
+                        </p>';
 return $arg;
 }
 
