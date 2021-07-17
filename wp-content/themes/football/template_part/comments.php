@@ -18,7 +18,9 @@ $add_below = 'div-comment';
 switch ( $comment->comment_type ) :
     case 'pingback' :
     case 'trackback' : ?>
-        <div class="pingback-entry"><span class="pingback-heading"><?php esc_html_e( 'Pingback:', 'textdomain' ); ?></span> <?php comment_author_link(); ?></div>
+        <div class="pingback-entry"><span class="pingback-heading"><?php esc_html_e( 'Pingback:', 'footballmania' );
+        ?></span>
+            <?php comment_author_link(); ?></div>
         <?php
     break;
     default :
@@ -34,14 +36,15 @@ switch ( $comment->comment_type ) :
                 echo get_avatar( $comment, 20 );
                 }
                 // Display author name
-                printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>', 'textdomain' ), get_comment_author_link() ); ?>
+                printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>', 'footballmania' ),
+                    get_comment_author_link() ); ?>
             </div><!-- .comment-author -->
             <div class="comment-details">
                 <div class="comment-meta commentmetadata">
                     <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
                         /* translators: 1: date, 2: time */
                         printf(
-                            __( '%1$s at %2$s', 'textdomain' ),
+                            __( '%1$s at %2$s', 'footballmania' ),
                             get_comment_date(),
                             get_comment_time()
                         ); ?>

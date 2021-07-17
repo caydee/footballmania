@@ -401,7 +401,10 @@ function home_top($limit,$start=0)
     $data 			= 	new WP_Query([ 'post__in' => $sticky , 'ignore_sticky_posts' => 1 , 'posts_per_page' => $limit , 'offset' => $start , 'orderby' => 'date' , 'order' => 'DESC' ]);
     return $data;
     }
-
+function custom_submit_comment_form( $submit_button ) {
+return '<input name="submit" type="submit" id="submit" class="btn btn-primary" value="Comment" />';
+}
+add_filter( 'comment_form_submit_button', 'custom_submit_comment_form' );
 
 function get_home_latest($limit,$start=0)
     {
