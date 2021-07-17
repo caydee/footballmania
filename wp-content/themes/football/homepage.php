@@ -13,58 +13,76 @@ get_header();
             <div class="card-header bg-dark text-light mb-3 border-0">
                 <strong>TOP NEWS</strong>
             </div>
-            <div class="card flex-xl-row mb-3 box-shadow">
-                <a href="" class="">
-                    <img class="card-img-left" alt="Thumbnail [200x250]" src="https://cdn.standardmedia.co.ke/images/monday/irene_ndunda_of_kdf_60ebf09d4bc62.jpg">
-                </a>
+            <?php
+				$data = home_top(1,2);
+				$x    = 1;
+				if($data->have_posts())
+					{
+						while ( $data->have_posts() ) : $data->the_post();
+						if($x == 1)
+						    {
+						        echo '<div class="card flex-xl-row mb-3 box-shadow">
+                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'" class="w-100">
+                                            ' . get_the_post_thumbnail($post,"first", ['class'=>'w-100 img-fluid'] ) .'
+                                        </a>
+                        
+                                        <div class="card-body">
+                                            <h1 class="h2">
+                                                <a class="text-dark card-link" href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">	'.get_the_title( $post ).'</a>
+                                            </h1>
+                                            <p class="card-text mb-auto">'.get_the_excerpt($post).'</p>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                        </div>
+                        
+                                    </div>
+                                    <div class="card-deck">';
+						    }
+						else if($x >=2 || $x<=4)
+						    {
+						        echo '<div class="card box-shadow mb-3">
+                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">' .
+                                    get_the_post_thumbnail($post,'second', ['class'=>'w-100 img-fluid'] ) .'</a>    
+                                        
+                                        <div class="card-body">
+                                            <h6 class="card-title">
+                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">
+                                                	'.get_the_title( $post ).'
+                                                </a>
+                                            </h6>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                        </div>
+                                    </div>';
+						    }
+						else if($x == 4)
+						    {
+						        echo '</div>
+                                <div class="card-deck">';
+						    }
+						else
+						    {
+						        echo '<div class="card box-shadow mb-3">
+                                        <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">
+                                            ' . get_the_post_thumbnail($post,array(500,800), ['class'=>'w-100 img-fluid'] ) .'
+                                        </a>                                        
+                                        <div class="card-body">
+                                            <h6 class="card-title">
+                                                <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'">	'.get_the_title( $post ).'</a>
+                                            </h6>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                        </div>
+                                    </div>';
+						    }
+                        $x++;
+							endwhile;
+						wp_reset_postdata();
+					}
+					?>
 
-                <div class="card-body">
-                    <h1 class="h2">
-                        <a class="text-dark card-link" href="#">Lionel Messi’s brother arrested in gun-drama</a>
-                    </h1>
-                    <p class="card-text mb-auto">Lionel Messi’s brother has been accused of assaulting a police officer who tried to arrest him after he allegedly threatened a driver he had crashed into with a gun.</p>
-                    <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                </div>
 
-            </div>
-            <div class="card-deck">
-                <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/wednesday/resilient_kenya_lion60ef0dbaeafa0.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title">Lionel Messi’s brother arrested in gun-drama</h6>
-                        <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                    </div>
-                </div>
-                <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/wednesday/bolt_tells_richardso60ee8ebe9a8db.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title">KPL preview: Ssimbwa, Pamzo meet for the first time since Narok bust up as Gor host Bandari</h6>
-                        <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/wednesday/arsenals_arteta_say60ee82808884e.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title">Players attacked by fans after Dutch league match</h6>
-                        <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-deck">
-                <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/irene_ndunda_of_kdf_60ebf09d4bc62.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title">Lionel Messi’s brother arrested in gun-drama</h6>
-                        <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                    </div>
-                </div>
-                <div class="card box-shadow mb-3">
-                    <img class="card-img-top d-none d-lg-inline-flex" src="https://cdn.standardmedia.co.ke/images/monday/irene_ndunda_of_kdf_60ebf09d4bc62.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title">Players attacked by fans after Dutch league match</h6>
-                        <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
-                    </div>
-                </div>
+
+
+
+
             </div>
             <div class="card-header bg-dark text-light mb-3 border-0">
                 <strong>LATEST NEWS</strong>
