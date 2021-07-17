@@ -114,6 +114,7 @@ if(have_posts() & is_singular())
 			';
     if ( comments_open() || get_comments_number() ) :
         comment_form();
+    comment_reply_link();
     endif;
     endwhile;
     wp_reset_postdata();
