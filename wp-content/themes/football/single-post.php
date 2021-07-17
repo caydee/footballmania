@@ -12,11 +12,11 @@ if(have_posts() & is_singular())
     {
     while(have_posts()):the_post();
 
-    echo '<main class="container">
+    echo '<main class="container mt-3">
 <div class="row">
 
 			<div class="col-12 col-md-8">
-				<article id="content" class="montserrat">
+				<article id="content" >
 					<h1 class="nunito fw-900">
 						'.get_the_title( $post->ID ).'
 					</h1>
@@ -111,11 +111,12 @@ if(have_posts() & is_singular())
 					<div class="fb-comments" data-href="'.get_the_permalink().'" data-width="100%" data-numposts="30"></div>
 				</article>
 				
-			</div>';
+			';
     endwhile;
     wp_reset_postdata();
     }
 ?>
+</div>
 
                     <h6>MORE STORIES</h6>
                     <div class="card-deck">
