@@ -72,7 +72,7 @@ function register_my_menu()
     register_nav_menu('social_menu',__( 'Social Menu','social-media' ));
     }
 add_action( 'init', 'register_my_menu' );
-function custom_css()
+function custom_css($output)
     {
         $output = apply_filters( 'bam_head_css', $output ); ?>
         ?>
