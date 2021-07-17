@@ -55,11 +55,6 @@ get_header();
                                         </div>
                                     </div>';
 						    }
-						else if($x == 4)
-						    {
-						        echo '</div>
-                                <div class="card-deck">';
-						    }
 						else
 						    {
 						        echo '<div class="card box-shadow mb-3">
@@ -74,6 +69,11 @@ get_header();
                                         </div>
                                     </div>';
 						    }
+                        if($x == 4)
+                            {
+                            echo '</div>
+                                <div class="card-deck">';
+                            }
                             $x++;
 							endwhile;
 						wp_reset_postdata();
