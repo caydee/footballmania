@@ -13,7 +13,7 @@ get_header();
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb w-100">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Library</li>
+            <li class="breadcrumb-item active" aria-current="page"><?=get_the_title(); ?></li>
         </ol>
     </nav>
 
@@ -24,7 +24,7 @@ get_header();
 <section class="privacy-policy pt-100 pb-160">
     <div class="container">
         <div class="single-privacy">
-            <h3 class="mt-0"><?=get_the_title(); ?></h3>
+
             <?=get_the_content(); ?>
         </div>
     </div>
