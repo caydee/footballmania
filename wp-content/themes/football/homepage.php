@@ -21,7 +21,7 @@ get_header();
 						while ( $data->have_posts() ) : $data->the_post();
 						if($x == 1)
 						    {
-						       var_dump($post);
+						       var_dump($post->ID);
 						        echo '<div class="card flex-xl-row mb-3 box-shadow">
                                         <a href="'.get_the_permalink().'" title="'.get_the_title( $post ).'" class="w-100">
                                             ' . get_the_post_thumbnail($post,"first", ['class'=>'w-100 img-fluid'] ) .'
