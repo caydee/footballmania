@@ -121,7 +121,45 @@ if(have_posts() & is_singular())
     }
 
 ?>
+<div class="row my-3">
+    <div class="col-12">
+        <div class="d-md-flex">
+            <?php
+            $previous_post = get_previous_post();
+            if (!empty( $previous_post )):
+                ?>
+                    <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>" class="text-dark pr-md-5 w-50">
+                        <div class="media d-flex justify-content-start">
+                            <span class="fas fa-angle-left mr-3 fa-3x align-self-center"></span>
+                            <div class="media-body">
+                                <small class="text-muted">Previous Article</small><br>
+                                <h5 class="mt-2 font-15"><?php echo esc_attr( $previous_post->post_title ); ?></h5>
+                            </div>
+                        </div>
+                    </a>
+                <?php
+            endif;
+            $next_post = get_next_post();
+            if (!empty( $next_post )):
+                ?>
+                    <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="text-dark text-right pl-md-5 w-50">
+                        <div class="media d-flex justify-content-end">
+                            <div class="media-body">
+                                <small class="text-muted">Next Article</small>
+                                <h5 class="mt-2 font-15"><?php echo esc_attr( $next_post->post_title ); ?></h5>
+                            </div>
+                            <span class="fas fa-angle-right ml-3 fa-3x align-self-center"></span>
+                        </div>
+                    </a>
+                <?php
+            endif;
+            ?>
 
+
+        </div>
+    </div>
+
+</div>
 
                     <h6>MORE STORIES</h6>
                     <div class="card-deck">
