@@ -18,7 +18,7 @@ get_header();
 				$x    = 1;
 				if($data->have_posts())
 					{
-						while ( $data->have_posts() ) : $data->the_post();
+						while ( $data->have_posts() ) : $post = $data->the_post();
 						if($x == 1)
 						    {
 						        echo '<div class="card flex-xl-row mb-3 box-shadow">
