@@ -59,7 +59,7 @@ get_header();
 						    {
 						        echo '<div class="card box-shadow mb-3">
                                         <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">
-                                            ' . get_the_post_thumbnail($post->ID,array(500,800), ['class'=>'w-100 img-fluid'] ) .'
+                                            ' . get_the_post_thumbnail($post->ID,'popular', ['class'=>'w-100 img-fluid'] ) .'
                                         </a>                                        
                                         <div class="card-body">
                                             <h6 class="card-title">
