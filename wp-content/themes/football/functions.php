@@ -402,6 +402,10 @@ function home_top($limit,$start=0)
     return $data;
     }
 require_once get_parent_theme_file_path( '/theme_part/comments.php' );
+add_filter( 'wp_list_comments_args', function( $args ) {
+    $args[ 'callback' ] = 'better_comments';
+    return $args;
+} );
 function get_home_latest($limit,$start=0)
     {
     $sticky 		= 	get_option( 'sticky_posts' );
