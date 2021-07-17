@@ -17,6 +17,40 @@ if (function_exists('add_theme_support'))
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support('post-thumbnails');
+    add_theme_support( 'custom-background', apply_filters( 'bam_custom_background_args', array(
+        'default-color' => '#ffffff',
+        'default-image' => '',
+    ) ) );
+    add_theme_support( 'html5', array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+    ) );
+
+
+    // Add theme support for selective refresh for widgets.
+    add_theme_support( 'customize-selective-refresh-widgets' );
+
+    // Add support for Block Styles.
+    add_theme_support( 'wp-block-styles' );
+
+    // Add support for editor styles.
+    add_theme_support( 'editor-styles' );
+
+    /**
+     * Add support for core custom logo.
+     *
+     * @link https://codex.wordpress.org/Theme_Logo
+     */
+    add_theme_support( 'custom-logo', array(
+        'height'      => 80,
+        'width'       => 250,
+        'flex-width'  => true,
+        'flex-height' => true,
+    ) );
+
     add_image_size('large', 730, '', true); //Large Thumbnail
     add_image_size('medium', 480, '', true); //Medium Thumbnail
     add_image_size('small', 225, '', true); //Small Thumbnail
@@ -38,7 +72,15 @@ function register_my_menu()
     register_nav_menu('social_menu',__( 'Social Menu','social-media' ));
     }
 add_action( 'init', 'register_my_menu' );
+function custom_css()
+    {
+        $output = apply_filters( 'bam_head_css', $output ); ?>
 
+        <style type="text/css" id="theme-custom-css">
+            <?php echo wp_strip_all_tags( $output ); ?>
+        </style>
+
+        }
 function add_classes_on_li($classes, $item, $args)
     {
     $classes[] = 'nav-item';

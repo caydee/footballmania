@@ -35,33 +35,33 @@ function wpmu_register_widgets() {
 register_sidebar( array(
     'name' => 'Footer-1',
     'id' => 'footer1',
-    'before_widget' => '<div class="w-100">',
+    'before_widget' => '<div  id="%1$s" class="widget %2$s w-100">',
     'after_widget' => '</div>',
-    'before_title' => '<h6 class="fw-600">',
+    'before_title' => '<h6 class="fw-600 widget-title">',
     'after_title' => '</h6>'
 ));
 register_sidebar( array(
     'name' => 'Footer-2',
     'id' => 'footer2',
-    'before_widget' => '<div class="col-12 col-md-3">',
+    'before_widget' => '<div  id="%1$s" class="widget %2$s col-12 col-md-3">',
     'after_widget' => '</div>',
-    'before_title' => '<h6 class="fw-600">',
+    'before_title' => '<h6 class="fw-600 widget-title">',
     'after_title' => '</h6>'
 ));
 register_sidebar( array(
     'name' => 'Footer-3',
     'id' => 'footer3',
-    'before_widget' => '<div class="col-12 col-md-3">',
+    'before_widget' => '<div class="widget %2$s col-12 col-md-3">',
     'after_widget' => '</div>',
-    'before_title' => '<h6 class="fw-600">',
+    'before_title' => '<h6 class="fw-600 widget-title">',
     'after_title' => '</h6>'
 ));
 register_sidebar( array(
     'name' => 'Footer-4',
     'id' => 'footer4',
-    'before_widget' => '<div class="col-12 col-md-3">',
+    'before_widget' => '<div class="widget %2$s col-12 col-md-3">',
     'after_widget' => '</div>',
-    'before_title' => '<h6 class="fw-600">',
+    'before_title' => '<h6 class="fw-600 widget-title">',
     'after_title' => '</h6>'
 ));
 }
