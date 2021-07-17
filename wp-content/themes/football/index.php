@@ -13,13 +13,12 @@ get_header();
     <div class="d-table">
         <div class="d-table-cell">
             <div class="container">
-                <div class="page-title-content">
-                    <h2>Privacy Policy</h2>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>Privacy Policy</li>
-                    </ul>
-                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
