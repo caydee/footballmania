@@ -35,3 +35,11 @@ if ( !function_exists('saraswati_blog_default_theme_options') ) :
         return apply_filters( 'saraswati_blog_default_theme_options', $default_theme_options );
         }
 endif;
+
+function  quick_blog_remove_post_formats() {
+
+add_theme_support( 'post-formats', array( 'image','aside') );
+
+}
+
+add_action( 'after_setup_theme', 'quick_blog_remove_post_formats', 11 );
