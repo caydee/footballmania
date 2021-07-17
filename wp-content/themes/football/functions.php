@@ -405,6 +405,12 @@ function custom_submit_comment_form( $submit_button ) {
 return '<input name="submit" type="submit" id="submit" class="btn btn-primary" value="Comment" />';
 }
 add_filter( 'comment_form_submit_button', 'custom_submit_comment_form' );
+function se_8476425_modify_comment_form_defaults( $defaults ) {
+$defaults[ 'class_form' ] = 'form-control';
+return $defaults;
+};
+
+add_filter( 'comment_form_defaults', 'se_8476425_modify_comment_form_defaults' );
 
 function get_home_latest($limit,$start=0)
     {
