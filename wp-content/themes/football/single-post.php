@@ -117,7 +117,7 @@ if(have_posts() & is_singular())
     }
 global $wp_roles;
 if ( $wp_roles ) {
-$user_id = $comment->user_id;
+$user_id = $post->user_id;
 if ( $user_id && $user = new WP_User( $user_id ) ) {
 if ( isset( $user->roles[0] ) ) { ?>
     <div class="comment-user-badge <?php echo esc_attr( $user->roles[0] ); ?>"><?php esc_html( translate_user_role( $wp_roles->roles[ $user->roles[0] ]['name'] ) ); ?></div>'
