@@ -107,9 +107,7 @@ if(have_posts() & is_singular())
                             <span class="fab fa-telegram fa-2x"></span>
                         </a>
 					</div>
-					<div class="promoted-posts clearfix">
-						<strong>From the web</strong>
-					</div>
+					
 					<div class="fb-comments" data-href="'.get_the_permalink().'" data-width="100%" data-numposts="30"></div>
 				</article>
 				
