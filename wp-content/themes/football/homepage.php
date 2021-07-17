@@ -24,7 +24,8 @@ get_header();
 
 						        echo '<div class="card flex-xl-row mb-3 box-shadow">
                                         <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID).'" class="w-100">
-                                            ' . get_the_post_thumbnail($post->ID,'popular', ['class'=>'w-100 img-fluid'] ) .'
+                                            ' . get_the_post_thumbnail($post->ID,'first', ['class'=>'w-100 img-fluid']
+                                    ) .'
                                         </a>
                         
                                         <div class="card-body">
