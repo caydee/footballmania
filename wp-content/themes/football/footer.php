@@ -34,11 +34,11 @@
                     <span class="navbar-text">
                         © 2021 Football Mania
                     </span>
-                <a class="nav-link text-muted" href="<?=site_url('page/terms-of-service'); ?>">Terms &amp;
+                <a class="nav-link text-muted" href="<?=site_url('terms-of-service'); ?>">Terms &amp;
                     Conditions
                 </a>
-                <a class="nav-link text-muted" href="<?=site_url('page/privacy-policy'); ?>">Privacy</a>
-                <a class="nav-link text-muted" href="<?=site_url('page/contact-us'); ?>">Contact Us</a>
+                <a class="nav-link text-muted" href="<?=site_url('privacy-policy'); ?>">Privacy</a>
+                <a class="nav-link text-muted" href="<?=site_url('contact-us'); ?>">Contact Us</a>
             </nav>
         </div>
     </div>
