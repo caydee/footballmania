@@ -117,9 +117,7 @@ if(have_posts() & is_singular())
     wp_reset_postdata();
     }
 ?>
-                    <div class="comments mb-3">
-                        <button class="btn btn-outline-secondary btn-block">LOAD COMMENTS</button>
-                    </div>
+
                     <h6>MORE STORIES</h6>
                     <div class="card-deck">
                         <div class="card box-shadow mb-3">
@@ -145,9 +143,6 @@ if(have_posts() & is_singular())
                         </div>
                     </div>
 
-        </article>
-
-</div>
             <div class="col-md-3 ">
     <div class="card-header bg-dark text-light mb-3 border-0">
         <strong>POPULAR HEADLINES</strong>
