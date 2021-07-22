@@ -194,6 +194,8 @@ img {
 }
 
 article {
+    line-height: 1rem;
+
     img {
         width: 100%;
         height: auto;
@@ -202,6 +204,7 @@ article {
     a {
         color: $danger;
     }
+
 }
 
 @include media-breakpoint-up(md) {

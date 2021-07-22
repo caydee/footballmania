@@ -33,7 +33,7 @@ get_header();
                                                 <a class="text-dark card-link" href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post ).'</a>
                                             </h1>
                                             <p class="card-text mb-auto">'.substr(get_the_excerpt($post->ID),0,200).'...</p>
-                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> '.time_ago(get_the_date()).'</div>
                                         </div>
                         
                                     </div>
@@ -52,7 +52,7 @@ get_header();
                                                 	'.get_the_title( $post->ID ).'
                                                 </a>
                                             </h6>
-                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> '.time_ago(get_the_date()).'</div>
                                         </div>
                                     </div>';
 						    }
@@ -66,7 +66,7 @@ get_header();
                                             <h6 class="card-title">
                                                 <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post->ID ).'</a>
                                             </h6>
-                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> '.time_ago(get_the_date()).'</div>
                                         </div>
                                     </div>';
 						    }
@@ -109,7 +109,7 @@ get_header();
                                                 <a class="text-dark card-link" href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post ).'</a>
                                             </h1>
                                             <p class="card-text mb-auto">'.get_the_excerpt($post->ID).'</p>
-                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> '.time_ago(get_the_date()).'</div>
                                         </div>
                         
                                     </div>
@@ -128,7 +128,7 @@ get_header();
                                                 	'.get_the_title( $post->ID ).'
                                                 </a>
                                             </h6>
-                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong>'.time_ago(get_the_date()).'</div>
                                         </div>
                                     </div>';
                 }
@@ -142,7 +142,7 @@ get_header();
                                             <h6 class="card-title">
                                                 <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post->ID ).'</a>
                                             </h6>
-                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
+                                            <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> '.time_ago(get_the_date()).'</div>
                                         </div>
                                     </div>';
                 }
