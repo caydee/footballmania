@@ -177,7 +177,8 @@ if(have_posts() & is_singular())
                             </a>    
                             <div class="card-body">
                                 <h6 class="card-title">
-                                    <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post->ID ).'</a>
+                                    <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'" class="text text-dark">	'
+                            .get_the_title( $post->ID ).'</a>
                                 </h6>
                                 <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
                             </div>
@@ -206,7 +207,8 @@ if($data->have_posts())
         </a>    
         <div class="card-body">
             <h5>
-                <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'">	'.get_the_title( $post->ID ).'</a>  
+                <a href="'.get_the_permalink().'" title="'.get_the_title( $post->ID ).'" class="text text-dark">	'.get_the_title(
+                        $post->ID ).'</a>  
             </h5>
             <div class="mb-1 text-muted small"><strong class="text-primary">Football</strong> Nov 12 2008</div>
         </div>
