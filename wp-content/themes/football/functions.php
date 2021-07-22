@@ -17,7 +17,25 @@ function fetch_posts($category, $limit, $offset)
     $posts = get_posts( $args );
     return $posts;
     }
+function related_posts($id)
+    {
+        $tags = wp_get_post_tags($id);
 
+        if ($tags)
+            {
+                $tag_ids = array();
+                foreach ($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+                $args = array(
+                                'tag__in' => $tag_ids ,
+                                'post__not_in' => array( $id ) ,
+                                'posts_per_page' => 4 , // Number of related posts to display.
+                                'caller_get_posts' => 1
+                            );
+                $my_query = new wp_query( $args );
+                return $my_query;
+            }
+        return false;
+    }
 function get_category_top($catid,$limit,$start=0)
     {
     $args 	= 	[

@@ -11,7 +11,7 @@ get_header();
 if(have_posts() & is_singular())
     {
     while(have_posts()):the_post();
-
+    $id =  $post->ID;
     echo '<main class="container mt-3">
 <div class="row">
 
@@ -165,7 +165,7 @@ if(have_posts() & is_singular())
 </div>
                     <div class="card-deck">
                         <?php
-                        $data = home_top(3);
+                        $data = related_posts($id);
 
                         if($data->have_posts())
                         {
