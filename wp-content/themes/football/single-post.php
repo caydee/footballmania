@@ -160,12 +160,16 @@ if(have_posts() & is_singular())
     </div>
 
 </div>
+<?php
+$data = related_posts($id);
+if($data):
+?>
 <div class="card-header bg-dark text-light mb-3 border-0">
                     <strong>Related Posts</strong>
 </div>
                     <div class="card-deck">
                         <?php
-                        $data = related_posts($id);
+
 
                         if($data->have_posts())
                         {
@@ -190,6 +194,9 @@ if(have_posts() & is_singular())
 
                     </div>
                  </div>
+<?php
+endif;
+?>
             <div class="col-md-4 ">
     <div class="card-header bg-dark text-light mb-3 border-0">
         <strong>POPULAR HEADLINES</strong>
