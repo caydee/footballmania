@@ -224,13 +224,13 @@ if($data->have_posts())
             <strong>LATEST POSTS</strong>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a class="text-dark card-link h6" href="#">KPL preview: Ssimbwa, Pamzo meet for the first time since Narok bust up as Gor host Bandari</a><span class="mb-1 text-muted small d-block"><strong class=" mb-2 text-primary">Football</strong> Nov 12 2008</span></li>
-            <li class="list-group-item"><a class="text-dark card-link h6" href="#">Players attacked by fans after Dutch league match</a><span class="mb-1 text-muted small d-block"><strong class=" mb-2 text-primary">Football</strong> Nov 12 2008</span></li>
-            <li class="list-group-item"><a class="text-dark card-link h6" href="#">Players attacked by fans after Dutch league match</a><span class="mb-1 text-muted small d-block"><strong class=" mb-2 text-primary">Football</strong> Nov 12 2008</span></li>
-            <li class="list-group-item"><a class="text-dark card-link h6" href="#">Players attacked by fans after Dutch league match</a><span class="mb-1 text-muted small d-block"><strong class=" mb-2 text-primary">Football</strong> Nov 12 2008</span></li>
-            <li class="list-group-item"><a class="text-dark card-link h6" href="#">Players attacked by fans after Dutch league match</a><span class="mb-1 text-muted small d-block"><strong class=" mb-2 text-primary">Football</strong> Nov 12 2008</span></li>
-            <li class="list-group-item"><a class="text-dark card-link h6" href="#">Players attacked by fans after Dutch league match</a><span class="mb-1 text-muted small d-block"><strong class=" mb-2 text-primary">Football</strong> Nov 12 2008</span></li>
-            <li class="list-group-item"><a class="text-dark card-link h6" href="#">Players attacked by fans after Dutch league match</a><span class="mb-1 text-muted small d-block"><strong class=" mb-2 text-primary">Football</strong> Nov 12 2008</span></li>
+            <li class="list-group-item">
+                <a class="text-dark card-link h6" href="#">KPL preview: Ssimbwa, Pamzo meet for the first time since Narok bust up as Gor host Bandari</a>
+                <span class="mb-1 text-muted small d-block">
+                    <strong class=" mb-2 text-primary">Football</strong> Nov 12 2008
+                </span>
+            </li>
+
         </ul>
     </div>
     <div class="matangazo text-center mb-3">
