@@ -25,7 +25,7 @@ if(have_posts() & is_singular())
 						<small class="text-pdgreen">By
 						 '.get_the_author().' 
 						<a href="" class="text-pdgreen">
-						</a> | June 11<sup>th</sup> 2019</small>
+						</a> | '.time_ago(get_the_date()).'</small>
 						<div class="share">
 							Share
 	                        <a href="" class="mx-2 text text-facebook social">
