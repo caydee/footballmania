@@ -22,9 +22,9 @@ if(have_posts() & is_singular())
 					</h1>
 					
 					<div class="d-flex justify-content-between">
-						<small class="text-pdgreen">By
+						<small class="text-muted">By
 						 '.get_the_author().' 
-						<a href="" class="text-pdgreen">
+						<a href="" class="text-muted">
 						</a> | '.time_ago(get_the_date()).'</small>
 						<div class="share">
 							Share
