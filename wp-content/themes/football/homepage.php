@@ -7,7 +7,7 @@
  */
 get_header();
 ?>
-<main role="main" class=" pt-3 px-2">
+<main role="main" class="container">
     <div class="row m-0">
         <div class="col-md-8">
             <div class="card-header bg-dark text-light mb-3 border-0">
